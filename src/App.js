@@ -1,9 +1,15 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Startpage } from 'components/Startpage';
+import { All } from 'components/All';
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Startpage />} />
+        <Route path="/music" element={<All />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
